@@ -4,6 +4,9 @@ import csv
 
 
 def file_write(fileformat, cinema_full_dict):
+    """
+    Writing a movie dictionary to a file depending on the format
+    """
     with open(f"movies.{fileformat}", "w", encoding="utf-8") as file:
         if fileformat == "txt":
             for key, value in cinema_full_dict.items():
@@ -20,6 +23,9 @@ def file_write(fileformat, cinema_full_dict):
 
 
 def file_reader(fileformat):
+    """
+    Reading a Recorded Movie Dictionary File
+    """
     cinema_list = []
     with open(f"movies.{fileformat}", "r", encoding="utf-8") as file:
         if fileformat == "txt":
@@ -39,6 +45,9 @@ def file_reader(fileformat):
 
 
 def file_processing(fileformat, cinema_list, person):
+    """
+    Working with a read file with a movie dictionary
+    """
     criterion_list = []
     if fileformat == "txt":
         for cinema in cinema_list:
@@ -91,6 +100,9 @@ def file_processing(fileformat, cinema_list, person):
 
 
 def criterion_write(criterion_list):
+    """
+    Writing a list of movies to a file according to a given criterion
+    """
     result_mmovies = ""
     for res in criterion_list:
         result = ",".join(res)
