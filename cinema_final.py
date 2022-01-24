@@ -1,4 +1,4 @@
-from cinema3 import file_write, file_reader, file_processing, criterion_write
+from cinema3 import Working_file
 from cinema2 import Cinema_dict
 
 
@@ -18,9 +18,10 @@ def main():
     result_path = input(
         "Enter the path to save the list by selection criterion: (optional step, you can click 'enter')")
 
-    file_write(file_format, Cinema_dict().create_cinema_dict())
+    Working_file().file_write(file_format, Cinema_dict().create_cinema_dict())
+    Working_file().criterion_write(file_format, Working_file().file_processing(file_format,
+                                            Working_file().file_reader(file_format), person))
 
-    criterion_write(file_format, file_processing(file_format, file_reader(file_format), person))
 
 if __name__ == "__main__":
     main()
