@@ -5,12 +5,10 @@ from cinema2 import Cinema_dict
 
 class Working_file():
     pass
-    #movie = Cinema_dict()
 def file_write(fileformat, cinema_full_dict):
     """
     Writing movie dictionaries to file formats txt, csv, json
     """
-    #movie = Cinema_dict()
     with open(f"movies.{fileformat}", "w", encoding="utf-8") as file:
         if fileformat == "txt":
             for key, value in cinema_full_dict.items():
