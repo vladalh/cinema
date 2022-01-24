@@ -23,7 +23,7 @@ def file_write(fileformat, cinema_full_dict):
             csv_file.writerows(cinema_full_dict.values())
 
         elif fileformat == "json":
-            json_file = json.dump(Cinema_dict(), file, indent=4)
+            json_file = json.dump(cinema_full_dict(), file, indent=4)
 
 
 def file_reader(fileformat):
